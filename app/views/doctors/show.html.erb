@@ -1,0 +1,17 @@
+<label>Appointments</label><br>
+<ul>
+    <% @doctor.appointments.each do |appointment| %> 
+        <li>
+            <%= appointment.date_and_time %><br>
+        </li>
+    <% end %> 
+</ul>
+<br>
+<label>Patients</label><br>
+<ul>
+    <% @doctor.patients.each do |patient| %> 
+        <li>
+            <%= link_to patient.name, patient_path(patient) %><br>
+        </li>
+    <% end %> 
+</ul>
